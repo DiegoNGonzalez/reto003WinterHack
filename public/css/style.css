@@ -1,0 +1,293 @@
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+}
+body {
+    background: #3f51b5;
+}
+header {
+    background: #303f9f;
+    width: 100%;
+    height: 85px;
+}
+.logo {
+    height: 70px;
+    border-radius: 10px;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+.addBtn {
+    position: fixed;
+    right: 16px;
+    bottom: 25px;
+    background: #ffc107;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #eceff1;
+    box-shadow: 3px 4px 10px 2px rgb(0 0 0 / 25%);
+}
+.imgAddBtn {
+    height: 30px;
+}
+
+.img-cara {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 10px;
+}
+.img-cara-desktop {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.pantallaForm,
+.pantallaEmpty,
+.pantallaDetalle,
+.pantallaLista {
+    width: 100%;
+    min-height: calc(100vh - 85px);
+    background: #c5cae9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.sectionOff {
+    display: none;
+}
+.formHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.inputProducto,
+.selectProducto,
+.textAreaDescripcion {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.popUp {
+    min-height: 50vh;
+    border: 1px solid #ffc107;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #303f9f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    width: 60%;
+}
+.btnCerrarForm {
+    border-radius: 25%;
+    color: #fafafa;
+    background-color: #ffc107;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+.tituloForm {
+    color: #fafafa;
+    padding-right: 20px;
+}
+.label {
+    color: #fafafa;
+    margin-bottom: 10px;
+}
+.btnAgregar {
+    background-color: #ffc107;
+    color: #fafafa;
+    border: none;
+    font-weight: 700;
+    border-radius: 25px;
+}
+.btnAgregarDesktop {
+    background-color: #ffc107;
+    color: #fafafa;
+    border: none;
+    font-weight: 700;
+    border-radius: 25px;
+    display: none;
+}
+.ulLista {
+    width: 70vw;
+    min-height: 60vh;
+    border: 2px solid #303f9f;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    list-style: none;
+    border-radius: 15px;
+}
+.liLista {
+    width: 100%;
+    background: #ffc107;
+    border-radius: 25px;
+    margin: 8px 5px;
+    border: 2px solid #303f9f;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.tituloHeaderLista {
+    padding: 10px;
+}
+.btnDetalle {
+    color: #fafafa;
+    border: 1px solid #3f51b5;
+    border-radius: 50%;
+    background-color: #303f9f;
+    font-weight: 700;
+    font-size: 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.imgLista {
+    border-radius: 50%;
+    border: 2px solid #303f9f;
+    background-color: #c5cae9;
+    height: 45px;
+}
+
+.modeloDetalle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30vh;
+    justify-content: space-around;
+}
+
+.ulDetalle {
+    list-style: none;
+    width: 100%;
+}
+.liDetalle {
+    background: #c5cae9;
+    height: 40vh;
+    border-radius: 10px;
+}
+.contenedorDetalle {
+    width: 45vw;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background: #c5cae9;
+    border: 2px solid #ffc107;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.imgDetalle {
+    height: 70px;
+    border-radius: 25%;
+    border: 2px solid #303f9f;
+    background-color: #c5cae9;
+}
+
+.pantallaDetalle {
+    background: #3f51b5;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        display: flex;
+    }
+    .pantallaEmpty {
+        background: #3f51b5;
+        width: 60vw;
+        color: #eceff1;
+    }
+    .img-cara {
+        display: none;
+    }
+    .img-cara-desktop {
+        display: block;
+    }
+    .pantallaForm {
+        background: #3f51b5;
+        display: flex;
+        width: 40vw;
+    }
+    #botonAdd {
+        display: none;
+    }
+    #btnCerrarForm {
+        display: none;
+    }
+    .btnAgregar {
+        display: none;
+    }
+    .btnAgregarDesktop {
+        display: block;
+    }
+    .pantallaLista {
+        width: 60vw;
+    }
+    .ulLista {
+        width: 45vw;
+        background: #c5cae9;
+        margin-left: 10px;
+    }
+    .pantallaDetalle {
+        background: #c5cae9;
+        width: 60vw;
+    }
+    .contenedorDetalle {
+        background: #3f51b5;
+    }
+    .liDetalle {
+        background: #3f51b5;
+        color: #eceff1;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .imgLista {
+        height: 30px;
+    }
+    .addBtn{
+        height: 45px;
+        width: 45px;
+    }
+    .imgAddBtn{
+        height: 23px;
+    }
+    .h2Modelo{
+        font-weight: 700;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 290px){
+    .logo{
+        width:75%;
+    }
+    .h2Modelo{
+        font-size:16px;
+    }
+    .btnDetalle{
+        height: 25px;
+    }
+    .imgLista {
+        height: 25px;
+    }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mallwart</title>
+        <meta name="description" content="Single Page App Lista de compras" />
+        <meta
+            name="keywords"
+            content="lista, compras, app de compras, supermercado, frutas, verduras,"
+        />
+        <meta name="author" content="Diego Nicolas Gonzalez" />
+        <meta name="copyright" content="DNGV WinterHack 2022" />
+        <!--ROBOTS-->
+        <meta name="robots" content="index nofollow" />
+        <!--FACEBOOK-->
+        <meta property="og:title" content="Mallwart lista de compras" />
+        <meta
+            property="og:description"
+            content="single page application de una lista de compras  "
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:image"
+            content="https://reto003-winterhack.web.app/assets/img/logo.png"
+        />
+        <meta property="og:url" content="https://reto003-winterhack.web.app/" />
+
+        <!--TWITTER-->
+        <meta property="twitter:title" content="Mallwart lista de compras" />
+        <meta
+            property="twitter:description"
+            content="Single page application de una lista de compras "
+        />
+        <meta property="twitter:type" content="website" />
+        <meta
+            property="twitter:image"
+            content="https://reto003-winterhack.web.app/assets/img/logo.png"
+        />
+        <meta
+            property="twitter:url"
+            content="https://reto003-winterhack.web.app/"
+        />
+        <!--GOOGLE FONTS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <!--CSS-->
+        <link rel="stylesheet" href="css/style.css" />
+        <!--FAVICON-->
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <button class="addBtn" id="botonAdd">
+            <img src="assets/img/btnplus.png" alt="" class="imgAddBtn" />
+        </button>
+        <header class="topHeader">
+            <a href="index.html">
+                <img
+                    src="assets/img/logo.png"
+                    alt="logo de Mallwart"
+                    class="logo"
+            /></a>
+        </header>
+        <div class="container">
+            <section class="pantallaForm sectionOff" id="pantallaForm">
+                <div class="popUp">
+                    <div class="formHeader">
+                        <h4 class="tituloForm">Agregar Productos</h4>
+                        <button class="btnCerrarForm" id="btnCerrarForm">
+                            X
+                        </button>
+                    </div>
+                    <form action="#" id="formulario">
+                        <label for="main" class="label">Producto</label>
+                        <input
+                            type="text"
+                            name="tituloProducto"
+                            placeholder="Agrega tu producto"
+                            class="inputProducto"
+                            id="tituloProducto"
+                            maxlength="13"
+                            required
+                        />
+                        <label for="main" class="label">Categoria</label>
+                        <select
+                            class="selectProducto"
+                            id="categoriaProducto"
+                            name="categoriaProducto"
+                            required
+                        >
+                            <option selected value="">
+                                Elegi la categoria
+                            </option>
+                            <option value="bebidas.png">Bebidas</option>
+                            <option value="carniceria.png">Carniceria</option>
+                            <option value="electrodomesticos.png">
+                                Electrodomesticos
+                            </option>
+                            <option value="farmacia.png">Farmacia</option>
+                            <option value="frutas.png">Frutas</option>
+                            <option value="higiene.png">Higiene</option>
+                            <option value="lacteos.png">Lacteos</option>
+                            <option value="panaderia.png">Panaderia</option>
+                            <option value="varios.png">Varios</option>
+                            <option value="verduras.png">Verduras</option>
+                        </select>
+                        <label for="main" class="label">Detalle</label>
+                        <textarea
+                            name="detalleProducto"
+                            rows="4"
+                            class="textAreaDescripcion"
+                            placeholder="cantidad, tamaño, peso o lo que te parezca importante"
+                            id="detalleProducto"
+                            name="detalleProducto"
+                            required
+                        ></textarea>
+                        <button class="btnAgregar" id="btnGuardar">
+                            Agregar
+                        </button>
+                    </form>
+                    <button class="btnAgregarDesktop" id="btnGuardarDesktop">Agregar</button>
+                </div>
+            </section>
+            <section class="pantallaEmpty" id="pantallaEmpty">
+                <img src="assets/img/caratriste.png" alt="" class="img-cara" />
+                <img src="assets/img/caratristeDesktop.png" alt="" class="img-cara-desktop">
+                <h1>No tenes nada en tu lista</h1>
+            </section>
+            
+            <section class="pantallaLista sectionOff" id="pantallaLista">
+                <ul class="ulLista" id="ulLista"></ul>
+            </section>
+            <section class="pantallaDetalle sectionOff" id="pantallaDetalle">
+                <div class="contenedorDetalle">
+                    <button class="btnCerrarForm" id="cerrarDetalle">X</button>
+                    <ul id="ulDetalle" class="ulDetalle"></ul>
+                </div>
+            </section>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
