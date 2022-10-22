@@ -11,6 +11,9 @@ let ulDetalle = document.getElementById("ulDetalle");
 //declaracion en scope global del contador para la condicion empty state o lista
 let contador = 0;
 
+//array para localStorage
+let listadoStorage = [];
+
 //instanciado de botones
 let botonAdd = document.getElementById("botonAdd");
 let btnCerrarForm = document.getElementById("btnCerrarForm");
@@ -78,6 +81,8 @@ const addItem = (titulo, categoria, detalle) => {
                     
                 </li>`;
     ulLista.innerHTML += modelo;
+        listadoStorage.push(modelo);
+        localStorage.setItem("listaCompras", listadoStorage);
 };
 
 //evento del formulario para capturar los value de los productos ingresados por el usuario
@@ -90,7 +95,7 @@ formulario.addEventListener("submit", (e) => {
     pantallaForm.classList.add("sectionOff");
     pantallaLista.classList.remove("sectionOff");
 
-    addItem( titulo, categoria, detalle)
+    addItem(titulo, categoria, detalle)
     contador++;
     botonAdd.classList.remove("sectionOff");
     formulario.reset();
@@ -104,6 +109,13 @@ let tituloProducto = document.getElementById("tituloProducto");
 let categoriaProducto = document.getElementById("categoriaProducto");
 let detalleProducto = document.getElementById("detalleProducto");
 
+let desdeStorage = localStorage.getItem("listaCompras");
+if (desdeStorage) {
+    pantallaEmpty.classList.add("sectionOff");
+    pantallaLista.classList.remove("sectionOff"); //
+    ulLista.innerHTML += desdeStorage;;
+
+}
 //funcion para capturar values
 const saveValues = () => { 
     
